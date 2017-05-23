@@ -31,7 +31,7 @@ module Api
           end
 
           def destroy
-            @permit = @user.permits.find_by(params[:id])
+            @permit = Permit.find(params[:id])
             if @permit
               @permit.destroy
             else
@@ -42,7 +42,7 @@ module Api
           private
 
           def permit_params
-              params.require(:user).permit(:permitName, :permitType)
+              params.require(:permit).permit(:permitName, :permitType)
           end
         end
     end
