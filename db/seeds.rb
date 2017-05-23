@@ -8,5 +8,5 @@
 
 5.times do
   user = User.create({name: Faker::Name.name})
-  user.permits.create({permitName: Faker::Name.name, permitType: Faker::Lorem.sentence})
+  user.permits.create({permitName: Faker::Name.name, permitType: 1})
 end
