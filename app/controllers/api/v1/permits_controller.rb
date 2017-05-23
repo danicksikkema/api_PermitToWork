@@ -42,7 +42,7 @@ module Api
           private
 
           def permit_params
-              params.require(:user).permit(:permitnName, :permitType)
+              params.require(:user).permit(:permitName, :permitType)
           end
         end
     end
