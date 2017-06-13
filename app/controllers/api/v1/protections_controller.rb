@@ -44,7 +44,7 @@ module Api
           private
 
           def protection_params
-              params.require(:protections).protection(:name)
+              params.require(:protections).protection(:name, :permit_id)
           end
         end
     end
