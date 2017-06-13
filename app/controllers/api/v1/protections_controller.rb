@@ -1,6 +1,6 @@
 module Api
     module V1
-        class protectionController < ApplicationController
+        class ProtectionsController < ApplicationController
           def index
             @protections = Protection.order('created_at DESC')
             render json: @protections
