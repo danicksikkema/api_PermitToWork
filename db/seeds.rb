@@ -8,5 +8,5 @@
 
 5.times do
   user = User.create({name: Faker::Name.name})
-  user.permits.create({name: Faker::Name.name, type: "Hot work", description: "dit is een omschrijving"})
+  user.permits.create({permitName: Faker::Name.name, permitType: Faker::Name.name, permitDescription: Faker::Name.name})
 end

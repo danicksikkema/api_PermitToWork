@@ -1,3 +1,3 @@
 class PermitSerializer < ActiveModel::Serializer
-  attributes :id, :name, :type, :description
+  attributes :id, :permitName, :permitType, :permitDescription
 end
