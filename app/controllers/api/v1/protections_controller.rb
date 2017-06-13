@@ -13,7 +13,6 @@ module Api
 
           def create
             @protection = Protection.new(protection_params)
-            # @protection.permit_id = params[:permit_id]
 
             if @protection.save
               render json: @protection, status: :created
@@ -44,7 +43,7 @@ module Api
           private
 
           def protection_params
-              params.require(:protections).protection(:name, :permit_id)
+              params.require(:protection).protections(:name, :permit_id)
           end
         end
     end
